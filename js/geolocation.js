@@ -1,9 +1,13 @@
 (function($) {
 	function postcodeSuccess(data) {
-		var input = $('#main form input[name="postcode"]');
+		var input = $('#postcode');
 		input.each(function(){
 			$(this).val(data.postcode);
 		});
+	}
+	
+	function generalError(error){
+		debugger;
 	}
 	
 	if(navigator.geolocation){
@@ -16,14 +20,13 @@
 				lon = position.coords.longitude;
 				
 				$.ajax({
-					url: '/lat-long-to-postcode.php?lat=' + lat + '&amp;lon=' + lon,
+					url: 'lat-long-to-postcode.php?lat=' + lat + '&amp;lon=' + lon,
 					dataType: 'json',
-					success: postcodeSuccess
+					success: postcodeSuccess,
+					error: generalError
 				});
 			},
-			function(error){
-				//Ask them for their postcode
-			}
+			generalError
 		);
 	}
 })(jQuery);
