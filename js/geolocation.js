@@ -1,6 +1,6 @@
 (function($) {
-	if(location.geolocation){
-		location.geolocation.getCurrentPosition(function(position){
+	if(navigator.geolocation){
+		navigator.geolocation.getCurrentPosition(function(position){
 			var lat,
 			longit;
 			
