@@ -765,7 +765,7 @@ class parseResponse
         // do we have a separator?
         if (strpos($contentType,';') !== false)
         {
-            list($type,$char) = split(';',$contentType);
+            list($type,$char) = explode(';',$contentType);
             // return both
             $this->encoding = trim(str_replace('charset=','',$char));
             $this->content_type = trim($type);
