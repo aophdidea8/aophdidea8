@@ -31,7 +31,7 @@ audio[controls], canvas, video { display: inline-block; *display: inline; *zoom:
 
 html { font-size: 100%; overflow-y: scroll; -webkit-overflow-scrolling: touch; -webkit-tap-highlight-color: rgba(0,0,0,0); -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
 
-body { margin: 0; font-size: 13px; line-height: 1.231; }
+body { margin: 0; font-size: 13px; line-height: 1.231; background: #2c2c2e url('/img/stripe.png') repeat 0 0; }
 
 body, button, input, select, textarea { font-family: sans-serif; color: #222; }
 
@@ -244,14 +244,100 @@ table { border-collapse: collapse; border-spacing: 0; }
    Modify as content requires.
    ========================================================================== */
 
+header h1 {
+	width: 200px;
+	float: left;
+	margin: 0;
+	padding:0;
+}
+
+#container {
+	width: 300px;
+	margin: 10px auto;
+	background: #f1f1f1;
+	padding: 10px;
+	border-radius: 10px;
+}
+#locationInput {
+	padding: 0 0 10px 0;
+}
+
+#locationInput {
+	float: right;
+}
+label span {
+	width: 70px;
+	display: block;
+	float: left;
+}
+.timeInput {
+	clear: both;
+	display:block;
+	float: left;
+}
+#postcodeInput {
+	margin: 0 0 5px 0;
+	width: 215px;
+}
+#timeInput {
+	width: 60px;
+}
+.clearLine {
+	clear: both;
+	margin: 5px 0 0 0;
+	display: block;
+	float: left;
+}
+.clearLine label {
+	padding: 0 10px;
+}
+
+#userActionsOne {
+	clear: both;
+}
+
+#userActionsOne section a {
+	text-decoration: none;
+	color: #333;
+	padding: 0 0 0 75px;
+	display: block;
+	height: 65px;
+	line-height: 65px;
+	font-size: 15px;
+	font-weight: bold;
+}
+#userActionsOne section {
+	background-repeat: no-repeat;
+	margin: 0 0 10px 0;
+	background-color: #d1d1d1;
+	border-radius: 5px;
+}
+
+#userActionsOne section.music {
+	background-image: url('/img/music.png');
+}
+#userActionsOne section.bowling {
+	background-image: url('/img/bowling.png');
+}
+#userActionsOne section.rugby {
+	background-image: url('/img/rugby.png');
+}
+#userActionsOne section.television {
+	background-image: url('/img/television.png');
+}
+
 @media only screen and (min-width: 480px) {
   /* Style adjustments for viewports 480px and over go here */
-
+	#container { 
+		width: 480px;
+	}
 }
 
 @media only screen and (min-width: 768px) {
   /* Style adjustments for viewports 768px and over go here */
-
+	#container { 
+		width: 760px;
+	}
 }
 
 
