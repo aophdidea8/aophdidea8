@@ -25,6 +25,12 @@ ABQIAAAAVpSB4ZP0FjpvpW0IkxhAzBQDimnP5PSCPZPDxCK880mVupYQ6hQsleyQELV68SdW2GbrMMUv
 nearby.org.uk api key
 3055bbe8ba5320
 
+Facebook app id
+169367879817491
+
+Facebook secret id
+37ec34f0592e31618e629a97edc9171c 
+
 */
 ?>
 
