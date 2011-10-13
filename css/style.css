@@ -247,12 +247,44 @@ table { border-collapse: collapse; border-spacing: 0; }
 #container {
 	width: 300px;
 	margin: 10px auto;
-	background: #fff;
+	background: #f1f1f1;
 	padding: 10px;
 	border-radius: 10px;
 }
+#locationInput {
+	padding: 0 0 10px 0;
+}
 
 
+#userActionsOne section a {
+	text-decoration: none;
+	color: #333;
+	padding: 0 0 0 75px;
+	display: block;
+	height: 65px;
+	line-height: 65px;
+	font-size: 15px;
+	font-weight: bold;
+}
+#userActionsOne section {
+	background-repeat: no-repeat;
+	margin: 0 0 10px 0;
+	background-color: #d1d1d1;
+	border-radius: 5px;
+}
+
+#userActionsOne section.movies {
+	background-image: url('/img/movie.png');
+}
+#userActionsOne section.bowling {
+	background-image: url('/img/bowling.png');
+}
+#userActionsOne section.rugby {
+	background-image: url('/img/rugby.png');
+}
+#userActionsOne section.television {
+	background-image: url('/img/television.png');
+}
 
 @media only screen and (min-width: 480px) {
   /* Style adjustments for viewports 480px and over go here */
