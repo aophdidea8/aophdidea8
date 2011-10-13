@@ -1,3 +1,23 @@
+<?php
+require_once('library/http.php');
+require_once('library/debug.php);
+require_once('library/facebook/facebook.php');
+
+/**
+
+Http Client request:
+
+$file = new HttpClient('get', 'http://www.google.com/');// trailing slasah is important!
+
+$file is an associatvie array of the headers, with the $file['data'] being in the key.
+
+Auto translates to utf8 etc
+
+
+
+*/
+
+
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
