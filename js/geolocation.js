@@ -1,7 +1,9 @@
 (function($) {
 	function postcodeSuccess(data) {
 		var input = $('#main form input[name="postcode"]');
-		input.val(data.postcode);
+		input.each(function(){
+			$(this).val(data.postcode);
+		});
 	}
 	
 	if(navigator.geolocation){
