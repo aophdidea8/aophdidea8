@@ -1,6 +1,5 @@
 <?php
 
-Require 'HtmlCleanser.php';
 
 /**
  * The root of all errors.
@@ -778,70 +777,4 @@ class MimeType
 
         return self::$mimeTypes[$extension];
     }
-
-}
-
-/**
- * Cleamn some html from a Word processor while trying to keep a very limited amount
- * of formatting
- */
-class CleanHtml
-{
-
-    private $html = '';
-
-    public function __construct($html, $encoding = null)
-    {
-        // turn to utf-8
-        if ($encoding === null)
-        {
-            $encoding = 'cp1252'; // standard windows encoding
-        }
-
-            
-        // try and get the actual content type
-        if (stripos($html, 'Content-Type') !== false)
-        {
-            $enc = $this->getEncoding($html);
-            if ($enc !== false)
-            {
-                $encoding = $enc;
-            }
-        }
-
-        // turn it into UTF-8
-        $html = Utils::normaliseString($html, $encoding);
-
-        $this->html = $html;
-    }
-
-    /**
-     * Clean the html
-     * @return string
-     */
-    public function clean()
-    {
-        return HtmlCleanser::clean($this->html);
-    }
-
-    private function getEncoding($html)
-    {
-        preg_match('#<meta http-equiv="?Content-Type"?\s?content="([^"]+)"#iU', $html, $htmlMatches);
-        $return = utils::parseContentType($htmlMatches[1]);
-        if (isset($return['charset']))
-            return $return['charset'];
-
-        return false;
-    }
-
-}
-
-if (!function_exists('apc_store'))
-{
-
-    function apc_store()
-    {
-        return null;
-    }
-
 }
