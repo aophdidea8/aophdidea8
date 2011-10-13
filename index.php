@@ -50,8 +50,8 @@ Facebook secret id
 	<link rel="stylesheet" href="css/style.css">
 
 	<script src="js/libs/jquery.js"></script>
+	<script src="js/libs/storage.js"></script>
 	<script src="js/geolocation.js"></script>
-	<script src="js/storage.js"></script>
 	<script src="js/sectionOpen.js"></script>
 </head>
 <body>
