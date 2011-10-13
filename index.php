@@ -38,6 +38,7 @@ Available as Post, Get, Cookie AS Int, Bool, String
 
 	<script src="js/libs/jquery.js"></script>
 	<script src="js/geolocation.js"></script>
+	<script src="js/storage.js"></script>
 </head>
 <body>
 
