@@ -244,6 +244,13 @@ table { border-collapse: collapse; border-spacing: 0; }
    Modify as content requires.
    ========================================================================== */
 
+header h1 {
+	width: 200px;
+	float: left;
+	margin: 0;
+	padding:0;
+}
+
 #container {
 	width: 300px;
 	margin: 10px auto;
@@ -266,9 +273,23 @@ label span {
 .timeInput {
 	clear: both;
 	display:block;
+	float: left;
+}
+#postcodeInput {
+	margin: 0 0 5px 0;
+	width: 215px;
 }
 #timeInput {
 	width: 60px;
+}
+.clearLine {
+	clear: both;
+	margin: 5px 0 0 0;
+	display: block;
+	float: left;
+}
+.clearLine label {
+	padding: 0 10px;
 }
 
 #userActionsOne {
@@ -292,8 +313,8 @@ label span {
 	border-radius: 5px;
 }
 
-#userActionsOne section.movies {
-	background-image: url('/img/movie.png');
+#userActionsOne section.music {
+	background-image: url('/img/music.png');
 }
 #userActionsOne section.bowling {
 	background-image: url('/img/bowling.png');
