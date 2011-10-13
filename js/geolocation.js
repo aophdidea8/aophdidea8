@@ -1,6 +1,6 @@
 (function($) {
 	function postcodeSuccess(data) {
-		var input = $('#postcode');
+		var input = $('#postcodeInput');
 		input.each(function(){
 			$(this).val(data.postcode);
 		});
