@@ -22,6 +22,9 @@ Available as Post, Get, Cookie AS Int, Bool, String
 Google API key
 ABQIAAAAVpSB4ZP0FjpvpW0IkxhAzBQDimnP5PSCPZPDxCK880mVupYQ6hQsleyQELV68SdW2GbrMMUvgowJIg
 
+nearby.org.uk api key
+3055bbe8ba5320
+
 */
 ?>
 
