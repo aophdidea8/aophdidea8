@@ -84,15 +84,15 @@ Facebook secret id
 					<article></article>
 				</section>
 				<section class="bowling">
-					<header><h3><a href="">10 Social Activities found</a></h3></header>
+					<header><h3><a href=""><?php echo rand(0,10) ?> Social Activities found</a></h3></header>
 					<article></article>
 				</section>
 				<section class="rugby">
-					<header><h3><a href="">1 Spectator Sport found</a></h3></header>
+					<header><h3><a href=""><?php echo rand(0,10) ?> Spectator Sport found</a></h3></header>
 					<article></article>
 				</section>
 				<section class="television">
-					<header><h3><a href="">10 looting's to be had</a></h3></header>
+					<header><h3><a href=""><?php echo rand(0,10) ?> looting's to be had</a></h3></header>
 					<article></article>
 				</section>
 			</div>
