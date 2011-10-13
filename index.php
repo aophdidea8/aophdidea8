@@ -22,14 +22,13 @@ Available as Post, Get, Cookie AS Int, Bool, String
 */
 ?>
 
-
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-	<title></title>
+	<title>Will I make it | AOP / Mozilla Hack day | Team 8</title>
 	<meta name="description" content="">
 	<meta name="author" content="">
 
