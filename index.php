@@ -1,4 +1,5 @@
 <?php
+require_once('vars.php');
 require_once('library/http.php');
 require_once('library/debug.php');
 require_once('library/facebook/facebook.php');
