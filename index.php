@@ -1,6 +1,6 @@
 <?php
 require_once('library/http.php');
-require_once('library/debug.php);
+require_once('library/debug.php');
 require_once('library/facebook/facebook.php');
 
 /**
@@ -13,7 +13,11 @@ $file is an associatvie array of the headers, with the $file['data'] being in th
 
 Auto translates to utf8 etc
 
+Additionally:
 
+HttpData::getPostAsString('formname');
+
+Available as Post, Get, Cookie AS Int, Bool, String 
 
 */
 
