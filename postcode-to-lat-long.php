@@ -6,12 +6,10 @@ require_once('library/debug.php');
 require_once('library/facebook/facebook.php');
 
 // get the data
-#$pcode = HttpData::getQueryAsString('postcode');
+$pcode = HttpData::getQueryAsString('postcode');
 
 // normalise the postcode
-#$postcode = normalisePostcode($postcode);
-
-$postcode = 'HP65JW';
+$postcode = strtolower(str_replace(' ', '', $pcode));
 
 $url = 'http://www.nearby.org.uk/api/convert.php';
 
@@ -20,11 +18,17 @@ $request->key = NEARBY;
 $request->p = $postcode;
 $request->output = 'text';
 
-var_dump($request->execute()); 
+$data = $request->execute(); 
+$data = explode("\n", $data['body']);
+
+$lines = explode(',', $data[4]);
+
+$lat = $lines[2];
+$lon = $lines[3];
 
 // return a json response with the lat and long
 $response = new StdClass;
 $response->lat = $lat;
-$response->long = $long;
+$response->lon = $lon;
 
 echo json_encode($response);
