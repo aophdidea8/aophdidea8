@@ -57,5 +57,3 @@ if ( $events = $geoClass->getEvents($methodVars) ) {
 else {
     die('<b>Error '.$geoClass->error['code'].' - </b><i>'.$geoClass->error['desc'].'</i>');
 }
-
-?>

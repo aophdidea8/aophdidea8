@@ -13,7 +13,6 @@
 					if(article.children().length !== 0){
 						article.slideToggle();
 					}
-					
 				});
 			});
 		});

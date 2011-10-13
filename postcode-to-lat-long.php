@@ -11,6 +11,17 @@ $pcode = HttpData::getQueryAsString('postcode');
 // normalise the postcode
 $postcode = strtolower(str_replace(' ', '', $pcode));
 
+/*
+$url = "http://where.yahooapis.com/geocode";
+
+$c = new HttpClient("get", $url);
+$c->line3 = $postcode;
+$c->flags = 'J';
+$c->appid= YAHOO_ID;
+
+var_dump($c->execute()); */
+
+
 $url = 'http://www.nearby.org.uk/api/convert.php';
 
 $request = new HttpClient('get', $url);
