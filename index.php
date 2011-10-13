@@ -61,8 +61,8 @@ Facebook secret id
 	</header>
 	<div id="main" role="main">
 		<form id="locationInput">
-			<label></label><input type="text" name="postcode" />
-			<label for="dateInput">Date:</label><input type=date id=dateInput>
+			<label for="postcodeInput">Location:</label><input type="text" name="postcode" id="postcodeInput" />
+			<label for="dateInput">Date:</label><input type=date id="dateInput">
 		</form>
 		
 		<div id="userActionsOne">
