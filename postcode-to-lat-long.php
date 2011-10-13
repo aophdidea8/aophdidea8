@@ -17,4 +17,4 @@ $response = new StdClass;
 $response->lat = $lat;
 $response->long = $long;
 
-return json_encode($response);
+echo json_encode($response);

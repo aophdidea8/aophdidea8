@@ -7,4 +7,4 @@ require_once('library/facebook/facebook.php');
 $response = new stdClass;
 $response->postcode = "HP6 5JW";
 
-return json_encode($response);
+echo json_encode($response);
