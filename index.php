@@ -25,14 +25,13 @@ ABQIAAAAVpSB4ZP0FjpvpW0IkxhAzBQDimnP5PSCPZPDxCK880mVupYQ6hQsleyQELV68SdW2GbrMMUv
 */
 ?>
 
-
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-	<title></title>
+	<title>Will I make it | AOP / Mozilla Hack day | Team 8</title>
 	<meta name="description" content="">
 	<meta name="author" content="">
 
@@ -51,10 +50,10 @@ ABQIAAAAVpSB4ZP0FjpvpW0IkxhAzBQDimnP5PSCPZPDxCK880mVupYQ6hQsleyQELV68SdW2GbrMMUv
 
 	</header>
 	<div id="main" role="main">
-
+		Hello this is a test!
 	</div>
 	<footer>
-
+		<p><a href="http://twitter.com/aophdidea8">Follow us on Twitter</a> we are at the AOP / Mozilla Hack day</p>
 	</footer>
 </div> <!--! end of #container -->
 
