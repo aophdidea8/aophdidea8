@@ -255,6 +255,25 @@ table { border-collapse: collapse; border-spacing: 0; }
 	padding: 0 0 10px 0;
 }
 
+#locationInput {
+	float: right;
+}
+label span {
+	width: 70px;
+	display: block;
+	float: left;
+}
+.timeInput {
+	clear: both;
+	display:block;
+}
+#timeInput {
+	width: 60px;
+}
+
+#userActionsOne {
+	clear: both;
+}
 
 #userActionsOne section a {
 	text-decoration: none;
