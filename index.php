@@ -64,19 +64,20 @@ Facebook secret id
 		
 		<form id="locationInput">
 			<label for="postcodeInput" class="postcodeInput"><span>Location:</span><input type="text" name="postcode" id="postcodeInput" /></label>
-			<label for="dateInput" class="timeInput"><span>Time:</span><input type=time id="timeInput" value="<?php echo date('G:i'); ?>"></label>
-			
-			<label for="distanceInput"><span>Distance:</span>
-			<select id="distanceInput">
-				<option value="0">0 Miles</option>
-				<option value="5">5 Miles</option>
-				<option value="10">10 Miles</option>
-				<option value="15">15+ Miles</option>
-			</select></label>
-			<div class="clearLine">
-			<span id="displayViewInput">Display As:</span>
-			<label for="listViewInput">List</label><input id="listViewInput" type="radio" name="displayStyle" value="list">
-			<label for="mapViewInput">Map</label><input id="mapViewInput" type="radio" name="displayStyle" value="map">
+			<div class="distances">
+				<label for="dateInput" class="timeInput"><span>Time:</span><input type=time id="timeInput" value="<?php echo date('G:i'); ?>"></label>
+				<label for="distanceInput" class="distanceInput"><span>Distance:</span>
+				<select id="distanceInput">
+					<option value="0">0 Miles</option>
+					<option value="5">5 Miles</option>
+					<option value="10">10 Miles</option>
+					<option value="15">15+ Miles</option>
+				</select></label>
+				<div class="clearLine">
+				<span id="displayViewInput">Display As:</span>
+				<label for="listViewInput">List</label><input id="listViewInput" type="radio" name="displayStyle" value="list">
+				<label for="mapViewInput">Map</label><input id="mapViewInput" type="radio" name="displayStyle" value="map">
+				</div>
 			</div>
 		</form>
 		
