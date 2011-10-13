@@ -61,7 +61,7 @@ Facebook secret id
 	<div id="main" role="main">
 		Hello this is a test!
 		<form>
-			<input type="text" name="postcode" />
+			<label for="postcode">Postcode</label>: <input type="text" id="postcode" name="postcode" placeholder="Please enter postcode" pattern="" />
 		</form>
 	</div>
 	<footer>
