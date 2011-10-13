@@ -10,4 +10,4 @@ $lon = HTtpData::getQueryAsString('lon');
 $response = new stdClass;
 $response->postcode = "HP6 5JW";
 
-return json_encode($response);
+echo json_encode($response);

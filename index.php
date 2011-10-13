@@ -56,10 +56,13 @@ Facebook secret id
 
 <div id="container">
 	<header>
-
+		<h1>Will I make it?</h1>
 	</header>
 	<div id="main" role="main">
 		Hello this is a test!
+		<form>
+			<input type="text" name="postcode" />
+		</form>
 	</div>
 	<footer>
 		<p><a href="http://twitter.com/aophdidea8">Follow us on Twitter</a> we are at the AOP / Mozilla Hack day</p>
