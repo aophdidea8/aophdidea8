@@ -262,31 +262,51 @@ header h1 {
 	padding: 0 0 10px 0;
 }
 
-#locationInput {
-	float: right;
-}
 label span {
 	width: 70px;
 	display: block;
 	float: left;
 }
+.distanceInput,
 .timeInput {
 	clear: both;
 	display:block;
 	float: left;
+	margin: 10px 0;
+	line-height: 2em;
+}
+.distanceInput {
+	clear: none;
+}
+.postcodeInput span {
+	display: none;
 }
 #postcodeInput {
-	margin: 0 0 5px 0;
-	width: 215px;
+	margin: 10px auto;
+	width: 230px;
+	clear: both;
+	display: block;
+	line-height: 2em;
+	font-size: 1.5em;
+	background: #dedede url('/img/globe.png') no-repeat  5px 8px;
+	padding: 5px 5px 5px 40px;
+	border-radius: 5px;
+	border: solid 1px #999;
+	box-shadow: inset 2px 2px 1px #d1d1d1;
 }
+.distances {
+	margin: 0 auto;
+}
+
 #timeInput {
 	width: 60px;
 }
 .clearLine {
 	clear: both;
-	margin: 5px 0 0 0;
+	margin: 5px auto;
 	display: block;
-	float: left;
+	text-align: center;
+	width: 230px;
 }
 .clearLine label {
 	padding: 0 10px;
@@ -330,6 +350,16 @@ label span {
   /* Style adjustments for viewports 480px and over go here */
 	#container { 
 		width: 480px;
+	}
+	#postcodeInput {
+		width: 430px
+	}
+	.distances {
+		width: 430px;
+	}
+	.distances label span {
+		width: 70px;
+		margin: 0 25px;
 	}
 }
 
