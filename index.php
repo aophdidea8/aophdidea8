@@ -63,7 +63,7 @@ Facebook secret id
 	<div id="main" role="main">
 		
 		<form id="locationInput">
-			<label for="postcodeInput" class="postcodeInput"><span>Location:</span><input type="text" name="postcode" id="postcodeInput" /></label>
+			<div class="searchSection"><label for="postcodeInput" class="postcodeInput"><span>Location:</span><input type="text" name="postcode" id="postcodeInput" /><input type="submit" id="submitButton"></label></div>
 			<div class="distances">
 				<label for="dateInput" class="timeInput"><span>Time:</span><input type=time id="timeInput" value="<?php echo date('G:i'); ?>"></label>
 				<label for="distanceInput" class="distanceInput"><span>Distance:</span>
@@ -75,7 +75,7 @@ Facebook secret id
 				</select></label>
 				<div class="clearLine">
 				<span id="displayViewInput">Display As:</span>
-				<label for="listViewInput">List</label><input id="listViewInput" type="radio" name="displayStyle" value="list">
+				<label for="listViewInput">List</label><input id="listViewInput" type="radio" name="displayStyle" checked value="list">
 				<label for="mapViewInput">Map</label><input id="mapViewInput" type="radio" name="displayStyle" value="map">
 				</div>
 			</div>

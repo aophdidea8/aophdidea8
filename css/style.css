@@ -245,21 +245,22 @@ table { border-collapse: collapse; border-spacing: 0; }
    ========================================================================== */
 
 header h1 {
-	width: 200px;
-	float: left;
 	margin: 0;
-	padding:0;
+	padding:10px;
+	text-align: center;
 }
 
 #container {
 	width: 300px;
 	margin: 10px auto;
 	background: #f1f1f1;
-	padding: 10px;
 	border-radius: 10px;
 }
 #locationInput {
-	padding: 0 0 10px 0;
+	padding: 10px;
+	background: #458FD1;
+	color: #fff;
+	letter-spacing: 0.1em;
 }
 
 label span {
@@ -283,19 +284,40 @@ label span {
 }
 #postcodeInput {
 	margin: 10px auto;
-	width: 230px;
+	width: 145px;
 	clear: both;
 	display: block;
 	line-height: 2em;
 	font-size: 1.5em;
 	background: #dedede url('/img/globe.png') no-repeat  5px 8px;
 	padding: 5px 5px 5px 40px;
-	border-radius: 5px;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
 	border: solid 1px #999;
 	box-shadow: inset 2px 2px 1px #d1d1d1;
+	float:left;
+}
+#submitButton {
+	-webkit-appearance: none;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border: solid 1px #999;
+	background: #C4C4C4;
+	line-height: 2em;
+	font-size: 1.5em;
+	padding: 5px 10px;
+	margin: 10px auto;
+	border-left: 0;
+	color:#666;
+}
+.searchSection {
+	margin: 0 auto;
+	width: 300px;
+	display: block;
 }
 .distances {
 	margin: 0 auto;
+	width: 200px;
 }
 
 #timeInput {
@@ -314,6 +336,7 @@ label span {
 
 #userActionsOne {
 	clear: both;
+	padding: 10px;
 }
 
 #userActionsOne section a {
@@ -346,20 +369,27 @@ label span {
 	background-image: url('/img/television.png');
 }
 
+footer {
+	padding: 10px;
+}
 @media only screen and (min-width: 480px) {
   /* Style adjustments for viewports 480px and over go here */
 	#container { 
 		width: 480px;
 	}
 	#postcodeInput {
-		width: 430px
+		width: 330px
 	}
 	.distances {
 		width: 430px;
 	}
 	.distances label span {
 		width: 70px;
-		margin: 0 25px;
+		margin: 0 5px 0 25px;
+		text-align: right;
+	}
+	.searchSection {
+		width: 480px;
 	}
 }
 
