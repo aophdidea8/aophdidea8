@@ -31,7 +31,7 @@ audio[controls], canvas, video { display: inline-block; *display: inline; *zoom:
 
 html { font-size: 100%; overflow-y: scroll; -webkit-overflow-scrolling: touch; -webkit-tap-highlight-color: rgba(0,0,0,0); -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
 
-body { margin: 0; font-size: 13px; line-height: 1.231; }
+body { margin: 0; font-size: 13px; line-height: 1.231; background: #2c2c2e url('/img/stripe.png') repeat 0 0; }
 
 body, button, input, select, textarea { font-family: sans-serif; color: #222; }
 
@@ -243,6 +243,13 @@ table { border-collapse: collapse; border-spacing: 0; }
    These override the primary ('mobile first') styles
    Modify as content requires.
    ========================================================================== */
+
+#container {
+	width: 400px;
+	margin: 0 auto;
+	background: #fff;
+	padding: 10px;
+}
 
 @media only screen and (min-width: 480px) {
   /* Style adjustments for viewports 480px and over go here */
