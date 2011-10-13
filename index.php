@@ -64,6 +64,7 @@ Facebook secret id
 		<form id="locationInput">
 			<label for="postcodeInput" class="postcodeInput"><span>Location:</span><input type="text" name="postcode" id="postcodeInput" /></label>
 			<label for="dateInput" class="timeInput"><span>Time:</span><input type=time id="timeInput" value="<?php echo date('G:i'); ?>"></label>
+			
 			<label for="distanceInput"><span>Distance:</span>
 			<select id="distanceInput">
 				<option value="0">0 Miles</option>
@@ -71,16 +72,18 @@ Facebook secret id
 				<option value="10">10 Miles</option>
 				<option value="15">15+ Miles</option>
 			</select></label>
+			<div class="clearLine">
 			<span id="displayViewInput">Display As:</span>
 			<label for="listViewInput">List</label><input id="listViewInput" type="radio" name="displayStyle" value="list">
 			<label for="mapViewInput">Map</label><input id="mapViewInput" type="radio" name="displayStyle" value="map">
+			</div>
 		</form>
 		
 		<section id="userActionsOne">
 			<header><h2>Event Listings</h2></header>
 			<div>
-				<section class="movies">
-					<header><h3><a href="">4 Movies found</a></h3></header>
+				<section class="music">
+					<header><h3><a href="">4 Gigs found</a></h3></header>
 					<article></article>
 				</section>
 				<section class="bowling">
