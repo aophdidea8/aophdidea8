@@ -60,10 +60,32 @@ Facebook secret id
 		<h1>Will I make it?</h1>
 	</header>
 	<div id="main" role="main">
-		Hello this is a test!
-		<form>
-			<input type="text" name="postcode" />
+		<form id="locationInput">
+			<label for="postcodeInput">Location:</label><input type="text" name="postcode" id="postcodeInput" />
+			<label for="dateInput">Date:</label><input type=date id="dateInput">
 		</form>
+		
+		<div id="userActionsOne">
+			<div>
+				<section class="movies">
+					<header><h3><a href="">Find a Movie</a></h3></header>
+					<article></article>
+				</section>
+				<section class="bowling">
+					<header><h3><a href="">Something Social</a></h3></header>
+					<article></article>
+				</section>
+				<section class="rugby">
+					<header><h3><a href="">Spectator Sports</a></h3></header>
+					<article></article>
+				</section>
+				<section class="television">
+					<header><h3><a href="">Let's stay in!</a></h3></header>
+					<article></article>
+				</section>
+			</div>
+		</div>
+		
 	</div>
 	<footer>
 		<p><a href="http://twitter.com/aophdidea8">Follow us on Twitter</a> we are at the AOP / Mozilla Hack day</p>
