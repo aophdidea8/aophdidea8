@@ -10,7 +10,7 @@ Http Client request:
 
 $file = new HttpClient('get', 'http://www.google.com/');// trailing slasah is important!
 
-$file is an associatvie array of the headers, with the $file['data'] being in the key.
+$file is an associatvie array of the headers, with the $file['body'] being in the key.
 
 Auto translates to utf8 etc
 
