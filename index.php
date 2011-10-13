@@ -47,7 +47,7 @@ Available as Post, Get, Cookie AS Int, Bool, String
 
 	</header>
 	<div id="main" role="main">
-
+		Hello this is a test!
 	</div>
 	<footer>
 
