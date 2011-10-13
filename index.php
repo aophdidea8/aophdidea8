@@ -52,6 +52,7 @@ Facebook secret id
 	<script src="js/libs/jquery.js"></script>
 	<script src="js/geolocation.js"></script>
 	<script src="js/storage.js"></script>
+	<script src="js/sectionOpen.js"></script>
 </head>
 <body>
 
@@ -60,31 +61,47 @@ Facebook secret id
 		<h1>Will I make it?</h1>
 	</header>
 	<div id="main" role="main">
+		
 		<form id="locationInput">
-			<label for="postcodeInput">Postcode</label>: <input type="text" name="postcode" id="postcodeInput" placeholder="Please enter postcode" />
-			<label for="dateInput">Date:</label><input type="date" id="dateInput">
+			<label for="postcodeInput" class="postcodeInput"><span>Location:</span><input type="text" name="postcode" id="postcodeInput" /></label>
+			<div class="distances">
+				<label for="dateInput" class="timeInput"><span>Time:</span><input type=time id="timeInput" value="<?php echo date('G:i'); ?>"></label>
+				<label for="distanceInput" class="distanceInput"><span>Distance:</span>
+				<select id="distanceInput">
+					<option value="0">0 Miles</option>
+					<option value="5">5 Miles</option>
+					<option value="10">10 Miles</option>
+					<option value="15">15+ Miles</option>
+				</select></label>
+				<div class="clearLine">
+				<span id="displayViewInput">Display As:</span>
+				<label for="listViewInput">List</label><input id="listViewInput" type="radio" name="displayStyle" value="list">
+				<label for="mapViewInput">Map</label><input id="mapViewInput" type="radio" name="displayStyle" value="map">
+				</div>
+			</div>
 		</form>
 		
-		<div id="userActionsOne">
+		<section id="userActionsOne">
+			<header><h2>Event Listings</h2></header>
 			<div>
-				<section class="movies">
-					<header><h3><a href="">Find a Movie</a></h3></header>
+				<section class="music">
+					<header><h3><a href="">4 Gigs found</a></h3></header>
 					<article></article>
 				</section>
 				<section class="bowling">
-					<header><h3><a href="">Something Social</a></h3></header>
+					<header><h3><a href=""><?php echo rand(0,10) ?> Social Activities found</a></h3></header>
 					<article></article>
 				</section>
 				<section class="rugby">
-					<header><h3><a href="">Spectator Sports</a></h3></header>
+					<header><h3><a href=""><?php echo rand(0,10) ?> Spectator Sport found</a></h3></header>
 					<article></article>
 				</section>
 				<section class="television">
-					<header><h3><a href="">Let's stay in!</a></h3></header>
+					<header><h3><a href=""><?php echo rand(0,10) ?> looting's to be had</a></h3></header>
 					<article></article>
 				</section>
 			</div>
-		</div>
+		</section>
 		
 	</div>
 	<footer>

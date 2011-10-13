@@ -2,6 +2,7 @@
 
 require_once('library/utils.php');
 ErrorHandler::Enable();
+date_default_timezone_set('GMT');
 define('NEARBY', '3055bbe8ba5320');
 define('GOOGLE_API', 'ABQIAAAAVpSB4ZP0FjpvpW0IkxhAzBQDimnP5PSCPZPDxCK880mVupYQ6hQsleyQELV68SdW2GbrMMUvgowJIg');
 define('FACEBOOK_SECRET_ID', '37ec34f0592e31618e629a97edc9171c');
