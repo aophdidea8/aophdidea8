@@ -33,7 +33,7 @@ html { font-size: 100%; overflow-y: scroll; -webkit-overflow-scrolling: touch; -
 
 body { margin: 0; font-size: 13px; line-height: 1.231; background: #2c2c2e url('/img/stripe.png') repeat 0 0; }
 
-body, button, input, select, textarea { font-family: sans-serif; color: #222; }
+body, button, input, select, textarea { font-family: arial, verdana , sans-serif; color: #222; }
 
 /* 
  * These selection declarations have to be separate
@@ -355,6 +355,38 @@ label span {
 	background-color: #d1d1d1;
 	border-radius: 5px;
 }
+#displayAs {
+	width: 310px;
+	margin: 0 auto;
+	text-align: center;
+}
+#displayAs a {
+	text-decoration: none;
+	color: #333;
+	padding: 5px 5px 5px 45px;
+	display: block;
+	height: 35px;
+	line-height: 35px;
+	font-size: 13px;
+	font-weight: 600;
+	float: left;
+	width: 100px;
+	background-repeat: no-repeat;
+	background-color: #d1d1d1;
+	background-position: 5px 5px;
+	text-align: left;
+	border: solid 1px #999;
+	letter-spacing: 0.1em;
+}
+#displayAs a.active {
+	background-color: #458FD1;
+	color: #fff;
+	box-shadow: inset 1px 1px 1px #3C7DB7;
+}
+
+#userActionsOne header {
+	clear: both;
+}
 
 #userActionsOne section.music {
 	background-image: url('/img/music.png');
@@ -367,6 +399,17 @@ label span {
 }
 #userActionsOne section.television {
 	background-image: url('/img/television.png');
+}
+#displayAs .list {
+	background-image: url('/img/list.png');
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+#displayAs .map {
+	background-image: url('/img/map.png');
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border-left: 0;
 }
 
 footer {

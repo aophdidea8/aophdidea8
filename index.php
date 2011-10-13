@@ -74,14 +74,17 @@ Facebook secret id
 					<option value="15">15+ Miles</option>
 				</select></label>
 				<div class="clearLine">
-				<span id="displayViewInput">Display As:</span>
-				<label for="listViewInput">List</label><input id="listViewInput" type="radio" name="displayStyle" checked value="list">
-				<label for="mapViewInput">Map</label><input id="mapViewInput" type="radio" name="displayStyle" value="map">
 				</div>
 			</div>
 		</form>
 		
 		<section id="userActionsOne">
+			
+			<div id="displayAs">
+				<a href="" class="list active">List</a>
+				<a href="" class="map">Map</a>
+			</div>
+			
 			<header><h2>Event Listings</h2></header>
 			<div>
 				<section class="music">
