@@ -20,6 +20,7 @@ HttpData::getPostAsString('formname');
 Available as Post, Get, Cookie AS Int, Bool, String 
 
 */
+?>
 
 
 <!doctype html>
