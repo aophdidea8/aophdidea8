@@ -25,7 +25,7 @@ $json = json_decode($d);
 
 try
 {
-	$results = $json->ResultSet->Results
+	$results = $json->ResultSet->Results;
 }
 catch (Exception $e)
 {
