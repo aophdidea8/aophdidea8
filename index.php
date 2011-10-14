@@ -53,14 +53,15 @@ Facebook secret id
 	<script src="js/jquery.formalize.js"></script>
 
 	<script src="js/libs/jquery.js"></script>
+	<script src="js/map.js"></script>
 	<script src="js/libs/storage.js"></script>
 	<script src="js/directions.js"></script>
-	<script src="js/map.js"></script>
 	<script src="js/geolocation.js"></script>
 	<script src="js/formSubmit.js"></script>
 	<script src="js/sectionSlide.js"></script>
 	<script src="js/getEvents.js"></script>
 	<script>
+		
 		$(document).ready(function() {
 			$('#displayAs a').click(function(event) {
 				event.preventDefault();
@@ -69,9 +70,6 @@ Facebook secret id
 				newDiv = $(this).attr('href').replace('/','');
 				$('.optionBox').hide();
 				$('#events'+newDiv).show();
-				if($(this).hasClass('map')){
-					$('body').trigger('mapLoad');
-				}
 			});
 		});
 	</script>
