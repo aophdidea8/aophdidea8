@@ -4,7 +4,6 @@ $(document).ready( function ()
 		{
 			e.preventDefault();
 			translatePostcode();
-			
 		});
 	}
 );
@@ -16,7 +15,13 @@ function translatePostcode()
 	$.ajax({
 		url: 'postcode-to-lat-long.php?postcode=' + postcode,
 		dataType: 'json',
-		success: function (r) { $('#lat').val(r.lat); $('#lon').val(r.lon); },
+		success: function (r) { 
+			$('#lat').val(r.lat); 
+			$('#lon').val(r.lon);
+			removeAllMarkers();
+		    changeMapCenter(r.lat, r.lon);
+			addMarker(r.lat, r.lon);
+		},
 		error: function (a,b,c) { }
 	});
 }
