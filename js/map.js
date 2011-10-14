@@ -34,8 +34,21 @@ $(document).ready(function() {
 			if(arguments[2] === true){
 				options.icon = new google.maps.MarkerImage('/img/marker_music.png');
 			}
+			
 			var marker = new google.maps.Marker(options);
+			if(arguments[3]){
+				addInfoPanel(marker,arguments[3]);
+			}
 			markersArray.push(marker);
+		}
+		
+		function addInfoPanel(marker,info){
+			var infowindow = new google.maps.InfoWindow({
+				content: info
+			});
+			google.maps.event.addListener(marker, 'click', function() {
+				infowindow.open(map,marker);
+			});
 		}
 		
 		function removeAllMarkers(){
