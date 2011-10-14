@@ -457,6 +457,28 @@ label span {
 article.listItem {
 	padding: 5px;
 }
+article.listItem article {
+	margin: 0 0 10px 0;
+	padding: 0 5px 10px 5px;
+	border-bottom: 1px solid #ccc;
+}
+article.listItem h2 {
+	background-color:#d1d1d1;
+	padding: 5px;
+	border-radius: 5px;
+	margin: 0 0 2px 0;
+}
+article.listItem p {
+	margin:0;
+	padding:0;
+}
+article.listItem p.eventLocation {
+	font-weight: bold;
+}
+article.listItem p.startTime {
+	color:#333;
+}
+article.listItem p.eventDescription {}
 
 footer {
 	padding: 10px;
