@@ -3,6 +3,10 @@
 //http://localhost/aophdidea8/lastfmFeed.php?location=London
 // Include the API
 require 'library/lastfmapi/lastfmapi.php';
+require_once('library/utils.php');
+require_once('library/http.php');
+
+require_once('library/tfl.php');
 
 // Put the auth data into an array
 $authVars = array(
@@ -20,7 +24,7 @@ $auth = new lastfmApiAuth('setsession', $authVars);
 $apiClass = new lastfmApi();
 $geoClass = $apiClass->getPackage($auth, 'geo');
 
-// Setup the variables
+// Setup the variablesLondon
 
 if( isset($_GET['location']) ) 
 {
@@ -52,6 +56,40 @@ else
 }
     
 if ( $events = $geoClass->getEvents($methodVars) ) {
+	$tfl = new Tfl();
+	$c = new HttpClient("get", "http://willimakeit-aophdidea8.dotcloud.com/lat-long-to-postcode.php");
+	$c->lat = $_GET['lat'];
+	$c->lon = $_GET['long'];
+
+	$data = $c->execute();
+
+	$d = $data['body'];
+
+	$json = json_decode($d);
+	$current_location = $json->postcode;
+
+	foreach($events['events'] as &$event) {
+		$c->lat = $event['venue']['location']['point']['lat'];
+		$c->lon = $event['venue']['location']['point']['long'];
+
+		$data = $c->execute();
+
+		$d = $data['body'];
+
+		$json = json_decode($d);
+		$venue_location = $json->postcode;
+
+		//Check distance
+		$journey = $tfl->check($current_location, $venue_location, 'locator', 'locator');
+		if (isset($journey->arrive)) {
+			preg_match("/(.*):(.*)/si", $journey->arrive, $time);
+			if ($time[1] < 19)
+				$event['possible'] = true;
+			else
+				$event['possible'] = false;
+		}
+	}
+
     echo json_encode($events);
 }
 else {

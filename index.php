@@ -48,6 +48,9 @@ Facebook secret id
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 
 	<link rel="stylesheet" href="css/style.css">
+	
+	<link rel="stylesheet" href="css/formalize.css" />
+	<script src="js/jquery.formalize.js"></script>
 
 	<script src="js/libs/jquery.js"></script>
 	<script src="js/libs/storage.js"></script>
@@ -58,50 +61,41 @@ Facebook secret id
 <body>
 
 <div id="container">
-	<header>
-		<h1>Will I make it?</h1>
-	</header>
 	<div id="main" role="main">
 		
 		<form id="locationInput">
+			<header>
+				<h1>Will I make it?</h1>
+			</header>
 			<div class="searchSection"><label for="postcodeInput" class="postcodeInput"><span>Location:</span><input type="text" name="postcode" id="postcodeInput" /><input type="submit" id="submitButton"></label></div>
-			<div class="distances">
-				<label for="dateInput" class="timeInput"><span>Time:</span><input type=time id="timeInput" value="<?php echo date('G:i'); ?>"></label>
-				<label for="distanceInput" class="distanceInput"><span>Distance:</span>
-				<select id="distanceInput">
-					<option value="0">0 Miles</option>
-					<option value="5">5 Miles</option>
-					<option value="10">10 Miles</option>
-					<option value="15">15+ Miles</option>
-				</select></label>
-				<div class="clearLine">
-				</div>
-			</div>
+			<div class="clearLine"></div>
 		</form>
 		
 		<section id="userActionsOne">
+			<header><h2>Event Listings</h2></header>
 			
 			<div id="displayAs">
 				<a href="" class="list active">List</a>
 				<a href="" class="map">Map</a>
+				<div class="clearLine"></div>
 			</div>
 			
-			<header><h2>Event Listings</h2></header>
-			<div>
+			
+			<div id="eventsListing">
 				<section class="music">
-					<header><h3><a href="">4 Gigs found</a></h3></header>
+					<header><h3><a href="">4 Gigs found<span></span></a></h3></header>
 					<article></article>
 				</section>
 				<section class="bowling">
-					<header><h3><a href=""><?php echo rand(0,10) ?> Social Activities found</a></h3></header>
+					<header><h3><a href=""><?php echo rand(2,5) ?> Social Activities found<span></span></a></h3></header>
 					<article></article>
 				</section>
 				<section class="rugby">
-					<header><h3><a href=""><?php echo rand(0,10) ?> Spectator Sport found</a></h3></header>
+					<header><h3><a href=""><?php echo rand(2,20) ?> Spectator Sports found<span></span></a></h3></header>
 					<article></article>
 				</section>
 				<section class="television">
-					<header><h3><a href=""><?php echo rand(0,10) ?> looting's to be had</a></h3></header>
+					<header><h3><a href=""><?php echo rand(2,15) ?> looting's to be had<span></span></a></h3></header>
 					<article></article>
 				</section>
 			</div>
