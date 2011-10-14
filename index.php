@@ -58,6 +58,19 @@ Facebook secret id
 	<script src="js/formSubmit.js"></script>
 	<script src="js/sectionSlide.js"></script>
 	<script src="js/map.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('body').trigger('mapLoad');
+			$('#displayAs a').click(function() {
+				$('#displayAs').children().removeClass('active');
+				$(this).addClass('active');
+				newDiv = $(this).attr('href').replace('/','');
+				$('.optionBox').hide();
+				$('#events'+newDiv).show();
+				return false;
+			});
+		});
+	</script>
 </head>
 <body>
 
@@ -76,13 +89,12 @@ Facebook secret id
 			<header><h2>Event Listings</h2></header>
 			
 			<div id="displayAs">
-				<a href="" class="list active">List</a>
-				<a href="" class="map">Map</a>
+				<a href="/Listing" class="list active">List</a>
+				<a href="/Map" class="map">Map</a>
 				<div class="clearLine"></div>
 			</div>
 			
-			
-			<div id="eventsListing">
+			<div id="eventsListing" class="optionBox">
 				<section class="music">
 					<header><h3><a href="">4 Gigs found<span></span></a></h3></header>
 					<article></article>
@@ -100,10 +112,13 @@ Facebook secret id
 					<article></article>
 				</section>
 			</div>
+			<div id="eventsMap"  class="optionBox">
+				<div id="map_canvas"></div>
+			</div>
 		</section>
 		
 	</div>
-	<div id="map_canvas" style="height:150px; width: 150px;"></div>
+	
 </div> <!--! end of #container -->
 <footer>
 	<p><a onclick="$('body').trigger('mapLoad')">Test map</a></p>

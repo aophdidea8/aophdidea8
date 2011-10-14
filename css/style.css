@@ -385,12 +385,19 @@ label span {
 /*	color: #666;*/
 	box-shadow: inset 1px 1px 1px #E5B78E;
 }
+#eventsMap,
 #eventsListing {
 	padding:5px;
 	background: #ffcb9e;
 	border-top-right-radius: 5px;
 	border-bottom-right-radius: 5px;
 	border-bottom-left-radius: 5px;
+}
+
+#map_canvas {
+	width: 270px;
+	height: 220px;
+	display: block;
 }
 
 #userActionsOne {
@@ -443,6 +450,11 @@ label span {
 	border-left: 0;
 }
 
+#eventsMap {
+	display:none;
+}
+
+
 footer {
 	padding: 10px;
 	text-align: center;
@@ -479,6 +491,11 @@ footer a {
 	}
 	#userActionsOne section a span.less {
 		background-image: url('/img/minus.png');
+	}
+	#map_canvas {
+		width: 450px;
+		height: 500px;
+		display: block;
 	}
 }
 
@@ -526,6 +543,11 @@ footer a {
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f69f40', endColorstr='#ef6703',GradientType=0 ); /* IE6-9 */
 		background: linear-gradient(top, #f69f40 0%,#eb4700 50%,#dd2500 51%,#ef6703 100%); /* W3C */
 
+	}
+	#map_canvas {
+		width: 730px;
+		height: 500px;
+		display: block;
 	}
 }
 
