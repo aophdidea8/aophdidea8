@@ -3,7 +3,7 @@ $(document).ready(function() {
 		mapOptions;
 	
 		function initialise () {
-			var latlng = new google.maps.LatLng(-34.397, 150.644);
+			var latlng = new google.maps.LatLng($('#lat').val(), $('#lon').val());
 			mapOptions = {
 				zoom: 8,
 				center: latlng,
