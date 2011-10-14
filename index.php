@@ -70,6 +70,7 @@ Facebook secret id
 				newDiv = $(this).attr('href').replace('/','');
 				$('.optionBox').hide();
 				$('#events'+newDiv).show();
+				window.idea8.loadMap();
 			});
 		});
 	</script>

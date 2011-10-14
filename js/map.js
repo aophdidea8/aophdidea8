@@ -80,5 +80,5 @@ $(document).ready(function() {
 		window.idea8.changeDiv = changeDiv;
 		window.idea8.removeAllMarkers = removeAllMarkers;
 		
-		loadMap();
+		window.idea8.loadMap = loadMap;
 });
