@@ -67,17 +67,6 @@ Facebook secret id
 				<h1>Will I make it?</h1>
 			</header>
 			<div class="searchSection"><label for="postcodeInput" class="postcodeInput"><span>Location:</span><input type="text" name="postcode" id="postcodeInput" /><input type="submit" id="submitButton"></label></div>
-			<div class="distances">
-				<label for="dateInput" class="timeInput"><span>Time:</span><input type=time id="timeInput" value="<?php echo date('G:i'); ?>"></label>
-				<label for="distanceInput" class="distanceInput"><span>Distance:</span>
-				<select id="distanceInput">
-					<option value="0">0 Miles</option>
-					<option value="5">5 Miles</option>
-					<option value="10">10 Miles</option>
-					<option value="15">15+ Miles</option>
-				</select></label>
-				<div class="clearLine"></div>
-			</div>
 			<div class="clearLine"></div>
 		</form>
 		
