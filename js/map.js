@@ -1,6 +1,7 @@
 $(document).ready(function() {
 		var map,
-		mapOptions;
+		mapOptions,
+		markersArray = [];
 	
 		function initialise () {
 			var latlng = new google.maps.LatLng($('#lat').val(), $('#lon').val());
@@ -34,6 +35,15 @@ $(document).ready(function() {
 				options.icon = new google.maps.MarkerImage('/img/marker_music.png');
 			}
 			var marker = new google.maps.Marker(options);
+			markersArray.push(marker);
+		}
+		
+		function removeAllMarkers(){
+			var i = 0,
+			arrayLength = markersArray.length;
+			for (;i<arrayLength;i += 1) {
+				markersArray[i].setMap(null);
+			}
 		}
 
 		function loadMap () {
