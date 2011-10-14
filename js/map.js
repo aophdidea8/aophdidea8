@@ -1,4 +1,4 @@
-(function() {
+$(document).ready(function() {
 		var map,
 		mapOptions,
 		markersArray = [];
@@ -80,5 +80,5 @@
 		window.idea8.changeDiv = changeDiv;
 		window.idea8.removeAllMarkers = removeAllMarkers;
 		
-		$('body').bind('mapLoad',loadMap);
-})();
+		loadMap();
+});
