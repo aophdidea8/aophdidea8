@@ -105,7 +105,9 @@ Facebook secret id
 						<section>
 							<header><h2>Tom Vek</h2></header>
 							<article>
-								<p>Blah blah blah</p>
+								<p class="eventLocation">Thekla</p>
+								<p class="startTime">00:00</p>
+								<p class="eventDescription">Yr magna viral, exercitation esse lomo incididunt synth velit mustache williamsburg sed. Proident skateboard consequat sapiente ex</p>
 							</article>
 						</section>
 					</article>
