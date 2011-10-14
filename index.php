@@ -59,8 +59,9 @@ Facebook secret id
 	<script src="js/geolocation.js"></script>
 	<script src="js/formSubmit.js"></script>
 	<script src="js/sectionSlide.js"></script>
-	<script src="js/map.js"></script>
+	
 	<script>
+		
 		$(document).ready(function() {
 			$('#displayAs a').click(function(event) {
 				event.preventDefault();
@@ -69,9 +70,6 @@ Facebook secret id
 				newDiv = $(this).attr('href').replace('/','');
 				$('.optionBox').hide();
 				$('#events'+newDiv).show();
-				if($(this).hasClass('map')){
-					$('body').trigger('mapLoad');
-				}
 			});
 		});
 	</script>
@@ -155,5 +153,6 @@ Facebook secret id
 <footer>
 	<p><a href="http://twitter.com/aophdidea8">Follow us on Twitter</a> we are at the AOP / Mozilla Hack day</p>
 </footer>
+<script src="js/map.js"></script>
 </body>
 </html>
