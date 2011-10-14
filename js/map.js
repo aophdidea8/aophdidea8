@@ -11,6 +11,7 @@
 				mapTypeId: google.maps.MapTypeId.ROADMAP
 			};
 			map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+			$('body').trigger('mapInitialised');
 		}
 		
 		function changeMapCenter (lat, lon) {

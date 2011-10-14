@@ -14,16 +14,18 @@ function getEvents()
 
 function eventsSuccess(result)
 {
-	$('body').trigger('mapLoad');
-	events = result.events;
-	$.each(events, function (a, b)
-	{
-		title = b.title;
-		
-		lat = b.venue.location.point.lat;
-		lon = b.venue.location.point.long;
-		
-		idea8.addMarker(lat, lon, title);
-		
+	$('body').bind('mapInitialised',function(){
+		events = result.events;
+		$.each(events, function (a, b)
+		{
+			title = b.title;
+			
+			lat = b.venue.location.point.lat;
+			lon = b.venue.location.point.long;
+			
+			idea8.addMarker(lat, lon, title);
+			
+		});
 	});
+	$('body').trigger('mapLoad');
 }
