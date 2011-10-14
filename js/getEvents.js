@@ -21,9 +21,9 @@ function eventsSuccess(result)
 		title = b.title;
 		
 		lat = b.venue.location.point.lat;
-		long = b.venue.location.point.long;
+		lon = b.venue.location.point.long;
 		
-		idea8.addMarker(lat, long, title);
+		idea8.addMarker(lat, lon, title);
 		
 	});
 }
