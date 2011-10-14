@@ -24,4 +24,4 @@
 		window.idea8 = {};
 	}
 	window.idea8.getDirections = directions;
-})(jquery);
+})(jQuery);
