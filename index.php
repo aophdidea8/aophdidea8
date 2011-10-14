@@ -60,14 +60,16 @@ Facebook secret id
 	<script src="js/map.js"></script>
 	<script>
 		$(document).ready(function() {
-			$('body').trigger('mapLoad');
-			$('#displayAs a').click(function() {
+			$('#displayAs a').click(function(event) {
+				event.preventDefault();
 				$('#displayAs').children().removeClass('active');
 				$(this).addClass('active');
 				newDiv = $(this).attr('href').replace('/','');
 				$('.optionBox').hide();
 				$('#events'+newDiv).show();
-				return false;
+				if($(this).hasClass('map')){
+					$('body').trigger('mapLoad');
+				}
 			});
 		});
 	</script>
@@ -78,8 +80,6 @@ Facebook secret id
 	<div id="main" role="main">
 		
 		<form id="locationInput">
-			<input type="hidden" name="latitude"  id="lat" value="" />
-			<input type="hidden" name="longitude" id="lon" value="" />
 			<header>
 				<h1>Will I make it?</h1>
 			</header>
