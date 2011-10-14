@@ -69,6 +69,7 @@ if ( $events = $geoClass->getEvents($methodVars) ) {
 	$current_location = $json->postcode;
 
 	foreach($events['events'] as &$event) {
+		$c = new HttpClient("get", "http://willimakeit-aophdidea8.dotcloud.com/lat-long-to-postcode.php");
 		$c->lat = $event['venue']['location']['point']['lat'];
 		$c->lon = $event['venue']['location']['point']['long'];
 
