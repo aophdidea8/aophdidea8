@@ -55,8 +55,9 @@ Facebook secret id
 	<script src="js/libs/jquery.js"></script>
 	<script src="js/libs/storage.js"></script>
 	<script src="js/geolocation.js"></script>
-	<script src="js/sectionOpen.js"></script>
 	<script src="js/formSubmit.js"></script>
+	<script src="js/sectionSlide.js"></script>
+	<script src="js/map.js"></script>
 </head>
 <body>
 
@@ -68,18 +69,6 @@ Facebook secret id
 				<h1>Will I make it?</h1>
 			</header>
 			<div class="searchSection"><label for="postcodeInput" class="postcodeInput"><span>Location:</span><input type="text" name="postcode" id="postcodeInput" /><input type="submit" id="submitButton"></label></div>
-
-			<div class="distances">
-				<label for="dateInput" class="timeInput"><span>Time:</span><input type="time" id="timeInput" value="<?php echo date('G:i'); ?>"></label>
-				<label for="distanceInput" class="distanceInput"><span>Distance:</span>
-				<select id="distanceInput">
-					<option value="0">0 Miles</option>
-					<option value="5">5 Miles</option>
-					<option value="10">10 Miles</option>
-					<option value="15">15+ Miles</option>
-				</select></label>
-				<div class="clearLine"></div>
-			</div>
 			<div class="clearLine"></div>
 		</form>
 		
@@ -95,27 +84,29 @@ Facebook secret id
 			
 			<div id="eventsListing">
 				<section class="music">
-					<header><h3><a href="">4 Gigs found</a></h3></header>
+					<header><h3><a href="">4 Gigs found<span></span></a></h3></header>
 					<article></article>
 				</section>
 				<section class="bowling">
-					<header><h3><a href=""><?php echo rand(2,5) ?> Social Activities found</a></h3></header>
+					<header><h3><a href=""><?php echo rand(2,5) ?> Social Activities found<span></span></a></h3></header>
 					<article></article>
 				</section>
 				<section class="rugby">
-					<header><h3><a href=""><?php echo rand(2,20) ?> Spectator Sports found</a></h3></header>
+					<header><h3><a href=""><?php echo rand(2,20) ?> Spectator Sports found<span></span></a></h3></header>
 					<article></article>
 				</section>
 				<section class="television">
-					<header><h3><a href=""><?php echo rand(2,15) ?> looting's to be had</a></h3></header>
+					<header><h3><a href=""><?php echo rand(2,15) ?> looting's to be had<span></span></a></h3></header>
 					<article></article>
 				</section>
 			</div>
 		</section>
 		
 	</div>
+	<div id="map_canvas" style="height:150px; width: 150px;"></div>
 </div> <!--! end of #container -->
 <footer>
+	<p><a onclick="$('body').trigger('mapLoad')">Test map</a></p>
 	<p><a href="http://twitter.com/aophdidea8">Follow us on Twitter</a> we are at the AOP / Mozilla Hack day</p>
 </footer>
 </body>
