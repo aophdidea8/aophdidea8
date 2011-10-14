@@ -66,7 +66,7 @@ if ( $events = $geoClass->getEvents($methodVars) ) {
 	$d = $data['body'];
 
 	$json = json_decode($d);
-	$current_location = $json->postcode . "aa";
+	$current_location = $json->postcode;
 
 	foreach($events['events'] as &$event) {
 		$c->lat = $event['venue']['location']['point']['lat'];
@@ -77,8 +77,7 @@ if ( $events = $geoClass->getEvents($methodVars) ) {
 		$d = $data['body'];
 
 		$json = json_decode($d);
-		$venue_location = $json->postcode . "aa";
-		$current_location = "w139ra";
+		$venue_location = $json->postcode;
 
 		//Check distance
 		$journey = $tfl->check($current_location, $venue_location, 'locator', 'locator');
