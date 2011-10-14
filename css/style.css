@@ -359,7 +359,7 @@ label span {
 }
 #displayAs {
 	width: 310px;
-	margin: 0 0 5px 0;
+	margin: 0;
 	text-align: center;
 }
 #displayAs a {
@@ -424,7 +424,7 @@ label span {
 	top: 2px;
 	right: 2px;
 }
-#userActionsOne section a span.less {
+#userActionsOne section a.less span {
 	background-image: url('/img/minus_16.png');
 }
 
@@ -454,6 +454,9 @@ label span {
 	display:none;
 }
 
+article.listItem {
+	padding: 5px;
+}
 
 footer {
 	padding: 10px;
@@ -489,7 +492,7 @@ footer a {
 		height: 24px;
 		background-image: url('/img/plus.png');
 	}
-	#userActionsOne section a span.less {
+	#userActionsOne section a.less span {
 		background-image: url('/img/minus.png');
 	}
 	#map_canvas {
