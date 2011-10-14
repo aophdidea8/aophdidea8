@@ -53,6 +53,7 @@ Facebook secret id
 	<script src="js/libs/storage.js"></script>
 	<script src="js/geolocation.js"></script>
 	<script src="js/sectionOpen.js"></script>
+	<script src="js/formSubmit.js"></script>
 </head>
 <body>
 
@@ -62,10 +63,15 @@ Facebook secret id
 	</header>
 	<div id="main" role="main">
 		
-		<form id="locationInput">
-			<div class="searchSection"><label for="postcodeInput" class="postcodeInput"><span>Location:</span><input type="text" name="postcode" id="postcodeInput" /><input type="submit" id="submitButton"></label></div>
+		<form id="locationInput" method="post">
+			<input type="hidden" name="longitude" value="" id="lon"/>
+			<input type="hidden" name="latitude" value="" id="lat"/>
+			<div class="searchSection"><label for="postcodeInput" class="postcodeInput"><span>Location:</span>
+				<input type="text" name="postcode" id="postcodeInput" />
+				<input type="submit" id="submitButton"></label>
+			</div>
 			<div class="distances">
-				<label for="dateInput" class="timeInput"><span>Time:</span><input type=time id="timeInput" value="<?php echo date('G:i'); ?>"></label>
+				<label for="dateInput" class="timeInput"><span>Time:</span><input type="time" id="timeInput" value="<?php echo date('G:i'); ?>"></label>
 				<label for="distanceInput" class="distanceInput"><span>Distance:</span>
 				<select id="distanceInput">
 					<option value="0">0 Miles</option>
