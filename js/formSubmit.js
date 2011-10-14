@@ -18,9 +18,9 @@ function translatePostcode()
 		success: function (r) { 
 			$('#lat').val(r.lat); 
 			$('#lon').val(r.lon);
-			removeAllMarkers();
-		    changeMapCenter(r.lat, r.lon);
-			addMarker(r.lat, r.lon);
+			idea8.removeAllMarkers();
+		    idea8.changeMapCenter(r.lat, r.lon);
+			idea8.addMarker(r.lat, r.lon);
 		},
 		error: function (a,b,c) { }
 	});
