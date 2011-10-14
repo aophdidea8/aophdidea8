@@ -57,7 +57,7 @@ else
     
 if ( $events = $geoClass->getEvents($methodVars) ) {
 	$tfl = new Tfl();
-	$c = new HttpClient("get", "http://flabbyrabbit.com/aophd/lat-long-to-postcode.php");
+	$c = new HttpClient("get", "http://willimakeit-aophdidea8.dotcloud.com/lat-long-to-postcode.php");
 	$c->lat = $_GET['lat'];
 	$c->lon = $_GET['long'];
 
