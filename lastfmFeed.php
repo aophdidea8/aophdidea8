@@ -1,4 +1,13 @@
 <?php
+$storage = $_GET['lat'] . "-" . $_GET['long'];
+$filename = "tmp/".md5($storage);
+
+if (file_exists($filename)) {
+	echo file_get_contents($filename);
+	return;
+}
+
+
 //http://localhost/aophdidea8/lastfmFeed.php?lat=51.51288236796371&long=-0.14621257781982422
 //http://localhost/aophdidea8/lastfmFeed.php?location=London
 // Include the API
@@ -91,8 +100,11 @@ if ( $events = $geoClass->getEvents($methodVars) ) {
 		}
 	}
 
-    echo json_encode($events);
+	$content =  json_encode($events);
+	echo $content;
+	file_put_contents($filename, $content);
 }
 else {
     die('<b>Error '.$geoClass->error['code'].' - </b><i>'.$geoClass->error['desc'].'</i>');
 }
+?>
