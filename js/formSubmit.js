@@ -21,6 +21,7 @@ function translatePostcode()
 			idea8.removeAllMarkers();
 		    idea8.changeMapCenter(r.lat, r.lon);
 			idea8.addMarker(r.lat, r.lon);
+			getEvents();
 		},
 		error: function (a,b,c) { }
 	});
