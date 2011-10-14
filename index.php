@@ -80,6 +80,8 @@ Facebook secret id
 	<div id="main" role="main">
 		
 		<form id="locationInput">
+			<input type="hidden" name="latitude" id="lat" />
+			<input type="hidden" name="longitude" id="lon" />
 			<header>
 				<h1>Will I make it?</h1>
 			</header>
