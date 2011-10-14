@@ -93,19 +93,19 @@ Facebook secret id
 			
 			<div id="eventsListing">
 				<section class="music">
-					<header><h3><a href="">4 Gigs found</a></h3></header>
+					<header><h3><a href="">4 Gigs found<span></span></a></h3></header>
 					<article></article>
 				</section>
 				<section class="bowling">
-					<header><h3><a href=""><?php echo rand(2,5) ?> Social Activities found</a></h3></header>
+					<header><h3><a href=""><?php echo rand(2,5) ?> Social Activities found<span></span></a></h3></header>
 					<article></article>
 				</section>
 				<section class="rugby">
-					<header><h3><a href=""><?php echo rand(2,20) ?> Spectator Sports found</a></h3></header>
+					<header><h3><a href=""><?php echo rand(2,20) ?> Spectator Sports found<span></span></a></h3></header>
 					<article></article>
 				</section>
 				<section class="television">
-					<header><h3><a href=""><?php echo rand(2,15) ?> looting's to be had</a></h3></header>
+					<header><h3><a href=""><?php echo rand(2,15) ?> looting's to be had<span></span></a></h3></header>
 					<article></article>
 				</section>
 			</div>

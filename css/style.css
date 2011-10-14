@@ -421,6 +421,26 @@ label span {
 #userActionsOne header {
 	clear: both;
 }
+#userActionsOne section {
+	position: relative;
+	z-index: 0;
+}
+
+#userActionsOne section a span {
+	float: right;
+	width: 24px;
+	height: 24px;
+	display: block;
+	background-repeat: no-repeat;
+	background-image: url('/img/plus_16.png');
+	margin: 5px;
+	position: absolute;
+	top: 2px;
+	right: 2px;
+}
+#userActionsOne section a span.less {
+	background-image: url('/img/minus_16.png');
+}
 
 #userActionsOne section.music {
 	background-image: url('/img/music.png');
@@ -472,6 +492,12 @@ footer a {
 	.timeInput { 
 		clear: none;
 		float:left;
+	}
+	#userActionsOne section a span {
+		background-image: url('/img/plus.png');
+	}
+	#userActionsOne section a span.less {
+		background-image: url('/img/minus.png');
 	}
 }
 
