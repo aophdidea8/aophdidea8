@@ -16,6 +16,7 @@ $filename = "tmp/".md5($url);
 if (file_exists($filename))
 {
 	echo file_get_contents($filename);
+	exit;
 }
 
 $c = new HttpClient("get", $url, true);
