@@ -11,6 +11,7 @@ if (file_exists($filename)) {
 //http://localhost/aophdidea8/lastfmFeed.php?lat=51.51288236796371&long=-0.14621257781982422
 //http://localhost/aophdidea8/lastfmFeed.php?location=London
 // Include the API
+require_once('vars.php');
 require 'library/lastfmapi/lastfmapi.php';
 require_once('library/utils.php');
 require_once('library/http.php');
@@ -54,7 +55,7 @@ else if( isset($_GET['lat']) && isset($_GET['long']) )
             //'long' => '-0.14621257781982422',
             'lat' => $_GET['lat'],
             'long' => $_GET['long'],
-            'distance ' => 10,
+            'distance ' => 5,
             'limit' => 10
     );
 
@@ -66,7 +67,7 @@ else
     
 if ( $events = $geoClass->getEvents($methodVars) ) {
 	$tfl = new Tfl();
-	$c = new HttpClient("get", "http://willimakeit-aophdidea8.dotcloud.com/lat-long-to-postcode.php");
+	$c = new HttpClient("get", "http://willimakeit-aophdidea8.dotcloud.com/lat-long-to-postcode.php", true);
 	$c->lat = $_GET['lat'];
 	$c->lon = $_GET['long'];
 
@@ -78,7 +79,8 @@ if ( $events = $geoClass->getEvents($methodVars) ) {
 	$current_location = $json->postcode;
 
 	foreach($events['events'] as &$event) {
-		$c = new HttpClient("get", "http://willimakeit-aophdidea8.dotcloud.com/lat-long-to-postcode.php");
+		echo $event['venue']['location']['point']['lat'];
+		$c = new HttpClient("get", "http://willimakeit-aophdidea8.dotcloud.com/lat-long-to-postcode.php", true);
 		$c->lat = $event['venue']['location']['point']['lat'];
 		$c->lon = $event['venue']['location']['point']['long'];
 
@@ -88,9 +90,15 @@ if ( $events = $geoClass->getEvents($methodVars) ) {
 
 		$json = json_decode($d);
 		$venue_location = $json->postcode;
-
 		//Check distance
-		$journey = $tfl->check($current_location, $venue_location, 'locator', 'locator');
+		try
+		{
+			$journey = $tfl->check($current_location, $venue_location, 'locator', 'locator');
+		}
+		catch (Exception $e)
+		{
+			continue;
+		}
 		if (isset($journey->arrive)) {
 			preg_match("/(.*):(.*)/si", $journey->arrive, $time);
 			if ($time[1] < 19)

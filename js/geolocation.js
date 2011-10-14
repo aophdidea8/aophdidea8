@@ -2,6 +2,7 @@
 	function postcodeSuccess(data) {
 		
 		$('#postcodeInput').val(data.postcode);
+		getEvents();
 	}
 	
 	function generalError(error){
