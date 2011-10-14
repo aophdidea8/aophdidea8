@@ -10,7 +10,14 @@ $lon = HTtpData::getQueryAsString('lon');
 
 $url = "http://where.yahooapis.com/geocode";
 $url = 'http://www.uk-postcodes.com/latlng/'.$lat.','.$lon.'.json';
-echo $url ;
+
+$filename = "/tmp/".md5($url);
+
+if ($file_exists($filename))
+{
+	return file_get_contents($filename);
+}
+
 $c = new HttpClient("get", $url, true);
 /*$c->gflags = "R";
 $c->location = "$lat $lon";
@@ -25,4 +32,7 @@ $postcode = $body->postcode;
 $response = new stdClass;
 $response->postcode = $result->postal;
 
-echo json_encode($response);
+$content = json_encode($response);
+file_put_contents($filename, $content);
+
+echo $content;
