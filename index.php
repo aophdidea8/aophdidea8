@@ -123,7 +123,6 @@ Facebook secret id
 	
 </div> <!--! end of #container -->
 <footer>
-	<p><a onclick="$('body').trigger('mapLoad')">Test map</a></p>
 	<p><a href="http://twitter.com/aophdidea8">Follow us on Twitter</a> we are at the AOP / Mozilla Hack day</p>
 </footer>
 </body>
