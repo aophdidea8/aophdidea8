@@ -47,10 +47,13 @@ $(document).ready(function() {
 		}
 
 		function loadMap () {
-			var script = document.createElement("script");
-			script.type = "text/javascript";
-			script.src = "http://maps.googleapis.com/maps/api/js?sensor=false&callback=idea8.initialise";
-			document.body.appendChild(script);
+			if(!map){
+				var script = document.createElement("script");
+				script.type = "text/javascript";
+				script.src = "http://maps.googleapis.com/maps/api/js?sensor=false&callback=idea8.initialise";
+				document.body.appendChild(script);
+			}
+			
 		}
 
 		if(!window.idea8){
