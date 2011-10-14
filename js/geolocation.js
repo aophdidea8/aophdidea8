@@ -1,7 +1,7 @@
 (function($) {
 	function postcodeSuccess(data) {
 		
-		$('#postcodeInput').val(data);
+		$('#postcodeInput').val(data.postcode);
 	}
 	
 	function generalError(error){
@@ -20,11 +20,6 @@
 					
 					$('#lat').val(lat);
 					$('#lon').val(lon);	
-					
-					postcodeSuccess('SE1 7UT');
-					return;
-					//If we've got these add a pair of hidden fields to the form.
-					
 					
 					
 					$.ajax({
