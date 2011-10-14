@@ -100,12 +100,26 @@ Facebook secret id
 			
 			<div id="eventsListing" class="optionBox">
 				<section class="music">
-					<header><h3><a href="">4 Gigs found<span></span></a></h3></header>
-					<article></article>
+					<header><h3><a href="" class="less">4 Gigs found<span></span></a></h3></header>
+					<article class="listItem">
+						<section>
+							<header><h2>Tom Vek</h2></header>
+							<article>
+								<p>Blah blah blah</p>
+							</article>
+						</section>
+					</article>
 				</section>
 				<section class="bowling">
-					<header><h3><a href=""><?php echo rand(2,5) ?> Social Activities found<span></span></a></h3></header>
-					<article></article>
+					<header><h3><a href="">1 Social Activity found<span></span></a></h3></header>
+					<article class="listItem">
+						<section>
+							<header><h2>Bowling</h2></header>
+							<article>
+								<p>Blah blah blah</p>
+							</article>
+						</section>
+					</article>
 				</section>
 				<section class="rugby">
 					<header><h3><a href=""><?php echo rand(2,20) ?> Spectator Sports found<span></span></a></h3></header>
@@ -125,7 +139,6 @@ Facebook secret id
 	
 </div> <!--! end of #container -->
 <footer>
-	<p><a onclick="$('body').trigger('mapLoad')">Test map</a></p>
 	<p><a href="http://twitter.com/aophdidea8">Follow us on Twitter</a> we are at the AOP / Mozilla Hack day</p>
 </footer>
 </body>
