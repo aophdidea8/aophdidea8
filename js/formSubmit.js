@@ -1,16 +1,10 @@
 $(document).ready( function () 
 	{
-        $('#submitButton').click(function (e) 
+        $('#locationInput').submit(function (e) 
 		{
 			e.preventDefault();
+			translatePostcode();
 			
-			lon = $('#lon').val();
-			lat = $('#lat').val();
-			
-			if (lat == '' || lon == '')
-			{
-				translatePostcode();
-			}
 		});
 	}
 );

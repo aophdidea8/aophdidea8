@@ -248,11 +248,19 @@ header h1 {
 	margin: 0;
 	padding:10px;
 	text-align: center;
+	float: left;
+	background-repeat: no-repeat;
+	text-indent: -999px;
+	background-image: url('/img/logo_84.png');
+	width: 85px;
+	height: 50px;
+	position: absolute;
+	top: 80px;
 }
 
 #container {
 	width: 300px;
-	margin: 10px auto;
+	margin: 0 auto 10px auto;
 	background: #f1f1f1;
 	border-radius: 10px;
 }
@@ -261,12 +269,14 @@ header h1 {
 	background: #458FD1;
 	color: #fff;
 	letter-spacing: 0.1em;
+	position: relative;
 }
 
 label span {
 	width: 70px;
 	display: block;
-	float: left;
+	clear: both;
+	line-height:1em;
 }
 .distanceInput,
 .timeInput {
@@ -284,7 +294,8 @@ label span {
 }
 #postcodeInput {
 	margin: 10px auto;
-	width: 145px;
+	width: 190px;
+	height: 50px;
 	clear: both;
 	display: block;
 	line-height: 2em;
@@ -301,6 +312,8 @@ label span {
 	-webkit-appearance: none;
 	border-top-right-radius: 5px;
 	border-bottom-right-radius: 5px;
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 0px;
 	border: solid 1px #999;
 	background: #C4C4C4;
 	line-height: 2em;
@@ -308,16 +321,26 @@ label span {
 	padding: 5px 10px;
 	margin: 10px auto;
 	border-left: 0;
-	color:#666;
+	color:#fff;
+	text-shadow: none;
+	height:50px;
+	background: #f69f40; /* Old browsers */
+	background: -moz-linear-gradient(top, #f69f40 0%, #eb4700 50%, #dd2500 51%, #ef6703 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f69f40), color-stop(50%,#eb4700), color-stop(51%,#dd2500), color-stop(100%,#ef6703)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #f69f40 0%,#eb4700 50%,#dd2500 51%,#ef6703 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #f69f40 0%,#eb4700 50%,#dd2500 51%,#ef6703 100%); /* Opera11.10+ */
+	background: -ms-linear-gradient(top, #f69f40 0%,#eb4700 50%,#dd2500 51%,#ef6703 100%); /* IE10+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f69f40', endColorstr='#ef6703',GradientType=0 ); /* IE6-9 */
+	background: linear-gradient(top, #f69f40 0%,#eb4700 50%,#dd2500 51%,#ef6703 100%); /* W3C */
+	
 }
 .searchSection {
-	margin: 0 auto;
-	width: 300px;
-	display: block;
+	float: right;
 }
 .distances {
-	margin: 0 auto;
-	width: 200px;
+	float: right;
+	width: 152px;
+	clear: right;
 }
 
 #timeInput {
@@ -352,12 +375,12 @@ label span {
 #userActionsOne section {
 	background-repeat: no-repeat;
 	margin: 0 0 10px 0;
-	background-color: #d1d1d1;
+	background-color: #F1F1F1;
 	border-radius: 5px;
 }
 #displayAs {
 	width: 310px;
-	margin: 0 auto;
+	margin: 0 0 5px 0;
 	text-align: center;
 }
 #displayAs a {
@@ -370,18 +393,29 @@ label span {
 	font-size: 13px;
 	font-weight: 600;
 	float: left;
-	width: 100px;
+	width: 88px;
 	background-repeat: no-repeat;
 	background-color: #d1d1d1;
 	background-position: 5px 5px;
 	text-align: left;
-	border: solid 1px #999;
+	border: 0;
 	letter-spacing: 0.1em;
 }
 #displayAs a.active {
-	background-color: #458FD1;
-	color: #fff;
-	box-shadow: inset 1px 1px 1px #3C7DB7;
+	background-color: #ffcb9e;
+/*	color: #666;*/
+	box-shadow: inset 1px 1px 1px #E5B78E;
+}
+#eventsListing {
+	padding:5px;
+	background: #ffcb9e;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+#userActionsOne {
+	margin: 40px 0 0 0;
 }
 
 #userActionsOne header {
@@ -403,12 +437,10 @@ label span {
 #displayAs .list {
 	background-image: url('/img/list.png');
 	border-top-left-radius: 5px;
-	border-bottom-left-radius: 5px;
 }
 #displayAs .map {
 	background-image: url('/img/map.png');
 	border-top-right-radius: 5px;
-	border-bottom-right-radius: 5px;
 	border-left: 0;
 }
 
@@ -428,18 +460,18 @@ footer a {
 		width: 480px;
 	}
 	#postcodeInput {
-		width: 330px
-	}
-	.distances {
-		width: 430px;
+		width: 360px
 	}
 	.distances label span {
 		width: 70px;
-		margin: 0 5px 0 25px;
-		text-align: right;
 	}
-	.searchSection {
-		width: 480px;
+	#displayAs a {
+		width: 100px;
+	}
+	.distanceInput,
+	.timeInput { 
+		clear: none;
+		float:left;
 	}
 }
 
@@ -447,6 +479,12 @@ footer a {
   /* Style adjustments for viewports 768px and over go here */
 	#container { 
 		width: 760px;
+	}
+	header h1 {
+		background-image: url('/img/logo_185.png');
+		width: 185px;
+		height: 130px;
+		top: 30px;
 	}
 }
 
