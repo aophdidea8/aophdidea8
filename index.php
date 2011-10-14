@@ -52,7 +52,8 @@ Facebook secret id
 	<script src="js/libs/jquery.js"></script>
 	<script src="js/libs/storage.js"></script>
 	<script src="js/geolocation.js"></script>
-	<script src="js/sectionOpen.js"></script>
+	<script src="js/sectionSlide.js"></script>
+	<script src="js/map.js"></script>
 </head>
 <body>
 
@@ -107,8 +108,10 @@ Facebook secret id
 		</section>
 		
 	</div>
+	<div id="map_canvas" style="height:150px; width: 150px;"></div>
 </div> <!--! end of #container -->
 <footer>
+	<p><a onclick="$('body').trigger('mapLoad')">Test map</a></p>
 	<p><a href="http://twitter.com/aophdidea8">Follow us on Twitter</a> we are at the AOP / Mozilla Hack day</p>
 </footer>
 </body>
