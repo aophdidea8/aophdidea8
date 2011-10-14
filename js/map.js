@@ -1,9 +1,10 @@
 $(document).ready(function() {
 		var map,
-		mapOptions;
+		mapOptions,
+		markersArray = [];
 	
 		function initialise () {
-			var latlng = new google.maps.LatLng(-34.397, 150.644);
+			var latlng = new google.maps.LatLng($('#lat').val(), $('#lon').val());
 			mapOptions = {
 				zoom: 8,
 				center: latlng,
@@ -34,6 +35,15 @@ $(document).ready(function() {
 				options.icon = new google.maps.MarkerImage('/img/marker_music.png');
 			}
 			var marker = new google.maps.Marker(options);
+			markersArray.push(marker);
+		}
+		
+		function removeAllMarkers(){
+			var i = 0,
+			arrayLength = markersArray.length;
+			for (;i<arrayLength;i += 1) {
+				markersArray[i].setMap(null);
+			}
 		}
 
 		function loadMap () {
@@ -51,6 +61,7 @@ $(document).ready(function() {
 		window.idea8.changeMapCenter = changeMapCenter;
 		window.idea8.addMarker = addMarker;
 		window.idea8.changeDiv = changeDiv;
+		window.idea8.removeAllMarkers = removeAllMarkers;
 		
 		$('body').bind('mapLoad',loadMap);
 });
