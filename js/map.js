@@ -9,7 +9,7 @@ $(document).ready(function() {
 				center: latlng,
 				mapTypeId: google.maps.MapTypeId.ROADMAP
 			};
-			map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+			map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
 		}
 		
 		function changeMapCenter (lat, lon) {
