@@ -1,15 +1,14 @@
 (function($) {
 	function postcodeSuccess(data) {
-		var input = $('#postcodeInput');
-		input.each(function(){
-			$(this).val(data.postcode);
-		});
+		
+		$('#postcodeInput').val(data);
 	}
 	
 	function generalError(error){
 	}
 	
 	$(document).ready(function(){
+		
 		if(navigator.geolocation){
 			navigator.geolocation.getCurrentPosition(
 				function(position){
@@ -19,11 +18,15 @@
 					lat = position.coords.latitude;
 					lon = position.coords.longitude;
 					
+					postcodeSuccess('SE1 7UT');
+					return;
 					//If we've got these add a pair of hidden fields to the form.
-					//
+					
+					$('#lat').val(lat);
+					$('#lon').val(lon);
 					
 					$.ajax({
-						url: 'lat-long-to-postcode.php?lat=' + lat + '&amp;lon=' + lon,
+						url: 'lat-long-to-postcode.php?lat=' + lat + '&lon=' + lon,
 						dataType: 'json',
 						success: postcodeSuccess,
 						error: generalError
